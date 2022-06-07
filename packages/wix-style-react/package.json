@@ -49,8 +49,7 @@
     "test:visual": "eyes-storybook -c ./.storybook/visual",
     "test:types": "tsc -p tsconfig.declarations.json",
     "test:swimm": "SWIMM_PATH=./node_modules/.bin/swimm_cli && ./scripts/get-swimm.sh $SWIMM_PATH $FORCE && ./scripts/run-swimm.sh $SWIMM_PATH",
-    "test:performance": "npm run transpile && npm run bundles:generate && npm install --no-save 
-    /perfer && perfer --verbose",
+    "test:performance": "npm run transpile && npm run bundles:generate && npm install --no-save @wix/perfer && perfer --verbose",
     "bundles:generate": "npm run build --prefix .perfer",
     "sanity": "autotools-sanity --files './src/**/*.meta.js'",
     "------build steps": "",
