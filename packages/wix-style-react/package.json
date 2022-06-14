@@ -1,7 +1,8 @@
 {
-  "name": "wix-style-react",
+  "name": "@virtuvent/wix-style-react",
   "description": "wix-style-react",
   "version": "9.87.0",
+  "private": false,
   "main": "./dist/src/index.js",
   "module": "./dist/es/src/index.js",
   "typings": "./dist/es/src/index.d.ts",
@@ -63,8 +64,8 @@
     "build-puppeteer-testkit": "webpack --config ./testkit/webpack.config.js",
     "storybook:build-visual": "build-storybook -c ./.storybook/visual",
     "------publish": "",
-    "postpublish": "if [ \"$NPM_BUILD_TYPE\" == \"TAR_PUBLISH\" ]; then npm install && npm run build && npm run storybook:build && npx janet deploy --ci; fi",
-    "pr-storybook:publish": "if [  \"$agentType\" = \"pullrequest\" ]; then npm run storybook:build && npx janet deploy --ci; fi;",
+    "___postpublish": "if [ \"$NPM_BUILD_TYPE\" == \"TAR_PUBLISH\" ]; then npm install && npm run build && npm run storybook:build && npx janet deploy --ci; fi",
+    "___pr-storybook:publish": "if [  \"$agentType\" = \"pullrequest\" ]; then npm run storybook:build && npx janet deploy --ci; fi;",
     "------CI Parallel tasks (as in .ci_config)": "",
     "test1:unit": "npm run test:unit",
     "test2:visual": "npm run test:visual",
@@ -99,13 +100,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wix/wix-style-react.git"
+    "url": "git+https://github.com/Virtuvent/wix-style-react.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wix/wix-style-react/issues"
+    "url": "https://github.com/Virtuvent/wix-style-react/issues"
   },
-  "homepage": "https://github.com/wix/wix-style-react#readme",
+  "homepage": "https://github.com/Virtuvent/wix-style-react#readme",
   "devDependencies": {
     "@applitools/eyes-storybook": "^3.16.5",
     "@babel/cli": "~7.11.6",
@@ -185,7 +186,7 @@
     "yoshi-flow-library": "^4.87.0",
     "yoshi-helpers": "^4.87.0",
     "yoshi-runtime": "1.0.732",
-    "yoshi-style-dependencies": "^4.228.0"
+    "yoshi-style-dependencies": "^4.71.0"
   },
   "peerDependencies": {
     "react": "^16.13.1 || ^17.0.0",
