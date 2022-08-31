@@ -5,6 +5,10 @@ export const linearProgressBarDriverFactory = element => {
   const errorIcon = () => element.$(`[data-hook='error-icon']`);
   return {
     ...coreLinearProgressBarDriverFactory(element),
-    showError: () => browser.actions().mouseMove(errorIcon()).perform(),
+    showError: () =>
+      browser
+        .actions()
+        .mouseMove(errorIcon())
+        .perform(),
   };
 };

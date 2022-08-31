@@ -143,8 +143,11 @@ const isEditorFocused = editorState => editorState.getSelection().getHasFocus();
  */
 const isEditorEmpty = editorState =>
   !editorState.getCurrentContent().hasText() &&
-  editorState.getCurrentContent().getBlockMap().first().getType() ===
-    blockTypes.unstyled;
+  editorState
+    .getCurrentContent()
+    .getBlockMap()
+    .first()
+    .getType() === blockTypes.unstyled;
 
 // Returns whether a text is selected
 const _hasSelectedText = editorState =>

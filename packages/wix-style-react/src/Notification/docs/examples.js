@@ -14,7 +14,9 @@ const sourceForThemes = theme => `
 </Cell>`;
 
 export const themes = wrapWithLayout(
-  Object.values(THEMES).map(sourceForThemes).join(''),
+  Object.values(THEMES)
+    .map(sourceForThemes)
+    .join(''),
 );
 
 export const actions = `

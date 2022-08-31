@@ -4,7 +4,11 @@ import { modalUniDriverFactory } from '../Modal.uni.driver';
 import { createTestStoryUrl } from '../../../test/utils/storybook-helpers';
 import { storySettings, testStories } from './storySettings';
 
-const pressTab = () => browser.actions().sendKeys(Key.TAB).perform();
+const pressTab = () =>
+  browser
+    .actions()
+    .sendKeys(Key.TAB)
+    .perform();
 
 describe('Modal', () => {
   let driver;

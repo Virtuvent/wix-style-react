@@ -196,7 +196,10 @@ describe('GoogleAddressInput', () => {
         countryCode: 'XX',
       });
       const event = { target: { value: 'Hatomer 49' } };
-      component.find('InputWithOptions').props().onInput(event);
+      component
+        .find('InputWithOptions')
+        .props()
+        .onInput(event);
 
       await eventually(() => {
         component.update();
@@ -263,7 +266,10 @@ describe('GoogleAddressInput', () => {
         onSet,
       });
       component.setState({ suggestions: defaultSuggestions });
-      component.find('InputWithOptions').props().onManuallyInput('my addr');
+      component
+        .find('InputWithOptions')
+        .props()
+        .onManuallyInput('my addr');
 
       await eventually(() => {
         expect(onSet.called).toBe(false);
@@ -278,7 +284,10 @@ describe('GoogleAddressInput', () => {
         onSet,
       });
       component.setState({ suggestions: defaultSuggestions });
-      component.find('InputWithOptions').props().onManuallyInput('dontfind');
+      component
+        .find('InputWithOptions')
+        .props()
+        .onManuallyInput('dontfind');
 
       await eventually(() => {
         expect(onSet.called).toBe(false);
@@ -294,7 +303,10 @@ describe('GoogleAddressInput', () => {
         fallbackToManual: true,
       });
       component.setState({ suggestions: [] });
-      component.find('InputWithOptions').props().onManuallyInput('dontfind');
+      component
+        .find('InputWithOptions')
+        .props()
+        .onManuallyInput('dontfind');
 
       await eventually(() => {
         expect(onSet.args[0][0]).toEqual(buildResult('dontfind'));
@@ -323,7 +335,10 @@ describe('GoogleAddressInput', () => {
         clearSuggestionsOnBlur: false,
       });
       component.setState({ suggestions: defaultSuggestions });
-      component.find('InputWithOptions').props().onBlur();
+      component
+        .find('InputWithOptions')
+        .props()
+        .onBlur();
       setTimeout(() => {
         expect(component.find('InputWithOptions').props().options).toHaveLength(
           1,

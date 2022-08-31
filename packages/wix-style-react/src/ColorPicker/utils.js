@@ -25,7 +25,10 @@ export function getRgbOrEmpty(_color) {
 export function getHsbOrEmpty(_color) {
   return isTransparent(_color)
     ? { h: '', s: '', l: '' }
-    : _color.hsl().round().object();
+    : _color
+        .hsl()
+        .round()
+        .object();
 }
 
 export function isTransparent(_color) {

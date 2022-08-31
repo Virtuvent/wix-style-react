@@ -48,7 +48,7 @@ describe('test-utils', () => {
 
     it('should bind passed prop-functions to *this*', () => {
       // NOTE: don't use arrow functions
-      const onEnterListener = function () {
+      const onEnterListener = function() {
         this.setState({ value: '' });
       };
       const NotifyOnEnter = ({ onEnter, ...passedProps }) => (

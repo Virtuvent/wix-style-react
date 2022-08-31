@@ -16,7 +16,9 @@ const sortableListFactory = ({ element, wrapper }) => {
     console.warn('SortableList factory expect to receive wrapper as composite component(react instance, and not a dom instance)'); // eslint-disable-line
   }
   const backend = isCompositeComponent
-    ? getInstanceOfDraggableProvider(vanillaWrapper).getManager().getBackend()
+    ? getInstanceOfDraggableProvider(vanillaWrapper)
+        .getManager()
+        .getBackend()
     : null;
 
   return {

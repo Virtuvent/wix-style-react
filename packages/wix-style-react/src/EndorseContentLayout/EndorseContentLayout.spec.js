@@ -21,7 +21,9 @@ describe('EndorseContentLayout', () => {
       const props = { [c]: <div>hey hope you render</div> };
       const wrapper = mount(<EndorseContentLayout {...props} />);
       driver.component = wrapper;
-      const text = driver.get[c]().at(0).text();
+      const text = driver.get[c]()
+        .at(0)
+        .text();
       expect(text).toBe('hey hope you render');
     });
   });

@@ -30,9 +30,8 @@ export const dropdownLayoutDriverFactory = base => {
 
   const optionElementAt = async position =>
     await base.$(
-      `[data-hook=${await getOptionsContainerDataHook()}] > *:nth-child(${
-        position + 1
-      })`,
+      `[data-hook=${await getOptionsContainerDataHook()}] > *:nth-child(${position +
+        1})`,
     );
 
   const optionElementByDataHook = async dataHook =>

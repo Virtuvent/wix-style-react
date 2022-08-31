@@ -32,7 +32,10 @@ describe('Autocomplete', () => {
     ];
 
     const predicate = option =>
-      option.value.toString().toLowerCase().indexOf('a') !== -1;
+      option.value
+        .toString()
+        .toLowerCase()
+        .indexOf('a') !== -1;
 
     it('should not filter anything without predicate function', async () => {
       const { dropdownLayoutDriver } = createDriver(

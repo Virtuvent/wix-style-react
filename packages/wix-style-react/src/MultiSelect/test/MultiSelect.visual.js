@@ -127,7 +127,7 @@ const interactiveTests = [
     its: [
       {
         it: 'LTR should show 2 tags',
-        componentDidMount: async function () {
+        componentDidMount: async function() {
           const driver = createDriver(interactiveDataHook).driver;
           await driver.clickOnInputWrapper();
         },
@@ -141,7 +141,7 @@ const interactiveTests = [
       },
       {
         it: 'RTL should show 2 tags',
-        componentDidMount: async function () {
+        componentDidMount: async function() {
           const driver = createDriver(interactiveDataHook).driver;
           await driver.clickOnInputWrapper();
         },

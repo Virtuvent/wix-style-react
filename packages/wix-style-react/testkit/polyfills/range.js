@@ -1,5 +1,5 @@
 const createRangeOrig =
-  typeof document === 'undefined' ? function () {} : document.createRange;
+  typeof document === 'undefined' ? function() {} : document.createRange;
 
 const install = () => {
   if (typeof document === 'undefined') {
@@ -7,19 +7,19 @@ const install = () => {
   }
   if (!document.createRange) {
     document.createRange = () => {
-      return (function () {
+      return (function() {
         const pub = {};
         pub.selectNodeContents = () => {};
 
-        pub.setEnd = function (elem) {
+        pub.setEnd = function(elem) {
           pub.commonAncestorContainer = elem;
         };
 
-        pub.setStart = function (elem) {
+        pub.setStart = function(elem) {
           pub.commonAncestorContainer = elem;
         };
 
-        pub.getBoundingClientRect = function () {
+        pub.getBoundingClientRect = function() {
           return { right: 0 };
         };
 

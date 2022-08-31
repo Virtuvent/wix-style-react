@@ -1,6 +1,6 @@
 module.exports = {
   // Applies the same box-sizing on all content and root
-  boxSizingMixin: function (boxSizing) {
+  boxSizingMixin: function(boxSizing) {
     return {
       boxSizing: boxSizing,
       '*': {
@@ -10,7 +10,7 @@ module.exports = {
   },
 
   // Sets color of an input placeholder
-  placeholderMixin: function (color) {
+  placeholderMixin: function(color) {
     return {
       '&::-webkit-input-placeholder': {
         color,
@@ -28,7 +28,7 @@ module.exports = {
   },
 
   // Sets the border radius
-  borderRadiusMixin: function (borderRadius) {
+  borderRadiusMixin: function(borderRadius) {
     return {
       borderRadius,
       '&:-webkit-autofill': {

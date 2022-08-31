@@ -212,7 +212,7 @@ const interactiveTests = [
     its: [
       {
         it: 'should not open calendar on click when disabled',
-        componentDidMount: async function () {
+        componentDidMount: async function() {
           const driver = createDriver(storySettings.dataHook);
           await driver.inputDriver.click();
         },
@@ -222,7 +222,7 @@ const interactiveTests = [
       },
       {
         it: 'should open calendar on click',
-        componentDidMount: async function () {
+        componentDidMount: async function() {
           const driver = createDriver(storySettings.dataHook);
           await driver.inputDriver.click();
         },

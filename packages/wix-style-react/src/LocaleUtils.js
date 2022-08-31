@@ -32,7 +32,7 @@ import ms from 'date-fns/locale/ms';
 import ro from 'date-fns/locale/ro';
 import lt from 'date-fns/locale/lt';
 import vi from 'date-fns/locale/vi';
-/*****************/
+/** ***************/
 
 import { convertTokens } from '@date-fns/upgrade/v2';
 

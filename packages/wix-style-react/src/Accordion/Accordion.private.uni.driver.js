@@ -8,5 +8,7 @@ export const accordionPrivateDriverFactory = (base, body) => ({
   getAmountOfItems: async () =>
     base.$$(`[data-hook="${dataHooks.item}"]`).count(),
   hoverOnItem: async idx =>
-    await getItemAt(idx, base).$('[data-hook="header"]').hover(),
+    await getItemAt(idx, base)
+      .$('[data-hook="header"]')
+      .hover(),
 });

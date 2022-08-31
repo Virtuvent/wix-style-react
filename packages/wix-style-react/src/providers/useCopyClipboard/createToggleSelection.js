@@ -14,7 +14,7 @@ export const createToggleSelection = () => {
 
   const selectPrevious = () => {
     selectionObject.removeAllRanges();
-    ranges.forEach(function (range) {
+    ranges.forEach(function(range) {
       selectionObject.addRange(range);
     });
     activeElement && activeElement.focus();

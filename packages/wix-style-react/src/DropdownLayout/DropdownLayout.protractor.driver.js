@@ -21,12 +21,18 @@ const driverFactory = component => {
     getDropdownItem: index => getDropdownItemElement(index).getText(),
     loaderExists: () => getLoader(),
     getDropdownItemsCount: () =>
-      component.$$(`[data-hook*="dropdown-item"]`).getText().count(),
+      component
+        .$$(`[data-hook*="dropdown-item"]`)
+        .getText()
+        .count(),
     selectItemById: itemId =>
       component.$(`[data-hook^="dropdown-item-${itemId}"]`).click(),
     hoverItemById: itemId => {
       const item = component.$(`[data-hook^="dropdown-item-${itemId}"]`);
-      return browser.actions().mouseMove(item).perform();
+      return browser
+        .actions()
+        .mouseMove(item)
+        .perform();
     },
     selectOptionAt: index => getDropdownItemElement(index).click(),
   };

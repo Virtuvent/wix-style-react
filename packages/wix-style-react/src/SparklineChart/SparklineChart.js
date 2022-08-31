@@ -142,7 +142,7 @@ class SparklineChart extends React.PureComponent {
       })
       .on('mousemove', d => {
         const dateUnderPointer = this.chartContext.xScale.invert(pointer(d)[0]);
-        const currentDateIndex = bisector(function (date) {
+        const currentDateIndex = bisector(function(date) {
           return date;
         }).left(labels, dateUnderPointer, 1);
 
@@ -310,7 +310,7 @@ class SparklineChart extends React.PureComponent {
     const inter = (highlightedStart - highlightedStartBefore) / 2 / innerWidth;
 
     const labels = this._getLabels(data);
-    const hoveredLabelIndex = bisector(function (d) {
+    const hoveredLabelIndex = bisector(function(d) {
       return d;
     }).left(labels, hoveredLabel, 0);
     const currentHoveredLabel = this._getLabelAt(data, hoveredLabelIndex);
@@ -404,9 +404,9 @@ class SparklineChart extends React.PureComponent {
             <g data-hook={dataHooks.dataContainer}></g>
             {this._shouldShowTooltip() && (
               <g
-                transform={`translate(${dataPoint.xCoordinate}, ${
-                  dataPoint.yCoordinate + TOOLTIP_ELEMENT_RADIUS / 2
-                })`}
+                transform={`translate(${
+                  dataPoint.xCoordinate
+                }, ${dataPoint.yCoordinate + TOOLTIP_ELEMENT_RADIUS / 2})`}
               >
                 <circle r={TOOLTIP_ELEMENT_RADIUS} fill={color}></circle>
               </g>

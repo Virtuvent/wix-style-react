@@ -1,6 +1,6 @@
 import { Category } from '../../../stories/storiesHierarchy';
 
-const PageWithScrollConstants = (function () {
+const PageWithScrollConstants = (function() {
   const SAFETY = 5;
   const pageHeight = 500;
   const pageBottomPadding = 48;

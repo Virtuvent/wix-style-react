@@ -16,7 +16,11 @@ import * as reactTestUtilsTestkitFactories from './index';
 import * as enzymeTestkitFactories from './enzyme';
 
 const noop = () => {};
-const lowerFirst = a => a.charAt(0).toLowerCase().concat(a.slice(1));
+const lowerFirst = a =>
+  a
+    .charAt(0)
+    .toLowerCase()
+    .concat(a.slice(1));
 
 const attachHooks = (beforeAllHook, afterAllHook) => {
   beforeAll(async () => await beforeAllHook());

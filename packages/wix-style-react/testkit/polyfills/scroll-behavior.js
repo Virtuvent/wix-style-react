@@ -1,5 +1,5 @@
 const originalScrollTo =
-  typeof window === 'undefined' ? function () {} : window.scrollTo;
+  typeof window === 'undefined' ? function() {} : window.scrollTo;
 
 const install = () => {
   if (typeof window === 'undefined') {

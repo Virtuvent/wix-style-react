@@ -1,10 +1,10 @@
 export const register = () => {
   if (window && !window.matchMedia) {
-    window.matchMedia = function () {
+    window.matchMedia = function() {
       return {
         matches: false,
-        addListener: function () {},
-        removeListener: function () {},
+        addListener: function() {},
+        removeListener: function() {},
       };
     };
   }

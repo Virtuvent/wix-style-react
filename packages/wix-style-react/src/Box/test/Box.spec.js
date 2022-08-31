@@ -148,9 +148,9 @@ describe('Box', () => {
     });
 
     it('should render with padding when passing space-separated values', async () => {
-      const expectedPadding = `${parseInt(stVars.Spacing) * 3}px ${
-        parseInt(stVars.Spacing) * 3
-      }px`;
+      const expectedPadding = `${parseInt(stVars.Spacing) * 3}px ${parseInt(
+        stVars.Spacing,
+      ) * 3}px`;
       const children = <span>Children</span>;
       const driver = createDriver(
         <Box padding={expectedPadding}>{children}</Box>,
@@ -175,9 +175,8 @@ describe('Box', () => {
       expect(await formatComplexSpacingValue('SP2 SP5')).toBe(expectedPadding);
     });
     it('should fomat padding when passing mixed space-separated spacing tokens', async () => {
-      const expectedPadding = `${stVars.SP2} 3px ${
-        parseInt(stVars.Spacing) * 4
-      }px ${parseInt(stVars.Spacing) * 5}px`;
+      const expectedPadding = `${stVars.SP2} 3px ${parseInt(stVars.Spacing) *
+        4}px ${parseInt(stVars.Spacing) * 5}px`;
 
       expect(await formatComplexSpacingValue('SP2 3px large 5')).toBe(
         expectedPadding,

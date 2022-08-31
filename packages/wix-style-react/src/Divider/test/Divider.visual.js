@@ -35,14 +35,12 @@ tests.forEach(({ describe, its }) => {
             <Divider {...props} />
           </div>
 
-          {
-            /* Checks the case of a flexbox container */
-            hasFlexboxContainer && (
-              <Box verticalAlign="middle" height="50px" marginTop={3}>
-                <Divider {...props} />
-              </Box>
-            )
-          }
+          {/* Checks the case of a flexbox container */
+          hasFlexboxContainer && (
+            <Box verticalAlign="middle" height="50px" marginTop={3}>
+              <Divider {...props} />
+            </Box>
+          )}
         </React.Fragment>
       ),
     );

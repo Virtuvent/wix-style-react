@@ -81,7 +81,7 @@ const interactiveTests = [
 
 const InteractiveEyeTest = ({ ...props }) => {
   useEffect(() => {
-    (async function () {
+    (async function() {
       const driver = createDriver(interactiveDataHook).driver;
       await driver.pressKey('ArrowDown');
     })();

@@ -104,9 +104,8 @@ class StackedBarChart extends React.PureComponent {
           <g
             data-hook={dataHooks.xAxis}
             className={classes.xAxis}
-            transform={`translate(${this.margin.left}, ${
-              this.chartHeight + this.margin.top
-            })`}
+            transform={`translate(${this.margin.left}, ${this.chartHeight +
+              this.margin.top})`}
           />
           <g
             data-hook={dataHooks.yAxis}

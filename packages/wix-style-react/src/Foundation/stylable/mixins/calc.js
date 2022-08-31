@@ -1,4 +1,4 @@
-module.exports = function (expression) {
+module.exports = function(expression) {
   const units = expression.match(/[a-z%]+/g);
 
   // All values are unitless, reduce to a single number.

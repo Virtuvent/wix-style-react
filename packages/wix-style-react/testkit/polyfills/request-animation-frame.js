@@ -18,7 +18,7 @@ const install = () => {
   }
 
   if (!window.requestAnimationFrame) {
-    window.requestAnimationFrame = function (callback) {
+    window.requestAnimationFrame = function(callback) {
       const currTime = new Date().getTime();
       const timeToCall = Math.max(0, 16 - (currTime - lastTime));
       const id = window.setTimeout(() => {
@@ -30,7 +30,7 @@ const install = () => {
   }
 
   if (!window.cancelAnimationFrame) {
-    window.cancelAnimationFrame = function (id) {
+    window.cancelAnimationFrame = function(id) {
       clearTimeout(id);
     };
   }

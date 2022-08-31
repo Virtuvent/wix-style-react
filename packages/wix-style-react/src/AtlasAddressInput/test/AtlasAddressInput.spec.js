@@ -38,12 +38,17 @@ const mockResults = (ambassadorTestkit, amountOfItems) => {
       })
       .build();
   });
-  const response = aPredictResponse().withPredictions(predictions).build();
+  const response = aPredictResponse()
+    .withPredictions(predictions)
+    .build();
   const atlasStub = ambassadorTestkit.createStub(
     WixAtlasServiceWeb,
     BASE_ATLAS_URL,
   );
-  atlasStub.AutocompleteServiceV2().predict.always().resolve(response);
+  atlasStub
+    .AutocompleteServiceV2()
+    .predict.always()
+    .resolve(response);
   return predictions;
 };
 
@@ -52,17 +57,26 @@ const mockSearchAddresses = (ambassadorTestkit, amountOfItems = 5) => {
     const mainText = `Address ${index + 1}`;
     const secondaryText = 'Country';
     const formattedAddress = `${mainText}, ${secondaryText}`;
-    return aCommonAddress().withFormattedAddress(formattedAddress).build();
+    return aCommonAddress()
+      .withFormattedAddress(formattedAddress)
+      .build();
   });
   const searchResults = addresses.map(address =>
-    aSearchResult().withAddress(address).build(),
+    aSearchResult()
+      .withAddress(address)
+      .build(),
   );
-  const response = aSearchResponse().withSearchResults(searchResults).build();
+  const response = aSearchResponse()
+    .withSearchResults(searchResults)
+    .build();
   const atlasStub = ambassadorTestkit.createStub(
     WixAtlasServiceWeb,
     BASE_ATLAS_URL,
   );
-  atlasStub.LocationServiceV2().search.always().resolve(response);
+  atlasStub
+    .LocationServiceV2()
+    .search.always()
+    .resolve(response);
   return addresses;
 };
 
@@ -71,7 +85,10 @@ const mockAmbassadorError = ambassadorTestkit => {
     WixAtlasServiceWeb,
     BASE_ATLAS_URL,
   );
-  atlasStub.AutocompleteServiceV2().predict.always().reject();
+  atlasStub
+    .AutocompleteServiceV2()
+    .predict.always()
+    .reject();
 };
 
 describe(AtlasAddressInput.displayName, () => {

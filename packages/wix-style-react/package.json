@@ -1,7 +1,7 @@
 {
   "name": "@virtuvent/wix-style-react",
   "description": "wix-style-react",
-  "version": "9.87.0",
+  "version": "9.91.0",
   "private": false,
   "main": "./dist/src/index.js",
   "module": "./dist/es/src/index.js",
@@ -123,7 +123,7 @@
     "@storybook/addon-links": "^5.3.21",
     "@storybook/addon-options": "^5.3.21",
     "@storybook/react": "^5.3.21",
-    "@stylable/cli": "^3.12.2",
+    "@stylable/cli": "^4.0.6",
     "@testing-library/react": "^11.2.5",
     "@testing-library/react-hooks": "^3.7.0",
     "@types/enzyme": "^3.10.8",
@@ -161,7 +161,7 @@
     "progress": "^2.0.3",
     "prompts": "^1.2.1",
     "protractor": "^5.4.4",
-    "puppeteer": "^16.0.0",
+    "puppeteer": "16.1.0",
     "query-string": "^6.13.8",
     "react": "^16.13.1",
     "react-dnd-test-backend": "^5.0.1",
@@ -186,7 +186,7 @@
     "yoshi-flow-library": "^4.87.0",
     "yoshi-helpers": "^4.87.0",
     "yoshi-runtime": "1.0.732",
-    "yoshi-style-dependencies": "^4.71.0"
+    "yoshi-style-dependencies": "4.71.0"
   },
   "peerDependencies": {
     "react": "^16.13.1 || ^17.0.0",
@@ -200,7 +200,7 @@
     "@babel/runtime": "^7.12.18",
     "@date-fns/upgrade": "^1.0.3",
     "@loadable/component": "^5.14.1",
-    "@stylable/dom-test-kit": "^3.12.2",
+    "@stylable/dom-test-kit": "^4.0.6",
     "@types/color": "^2.0.1",
     "bootstrap-sass": "^3.4.1",
     "chart.js": "^2.9.4",
@@ -240,7 +240,7 @@
     "wix-ui-core": "^3.0.186",
     "wix-ui-icons-common": "^2.0.308",
     "wix-ui-test-utils": "^1.0.178",
-    "yoshi-stylable-dependencies": "^4.86.0"
+    "yoshi-stylable-dependencies": "4.86.0"
   },
   "eslintConfig": {
     "extends": [

@@ -1,5 +1,5 @@
 const originalGetSelection =
-  typeof window === 'undefined' ? function () {} : window.getSelection;
+  typeof window === 'undefined' ? function() {} : window.getSelection;
 
 const install = () => {
   if (typeof window === 'undefined') {

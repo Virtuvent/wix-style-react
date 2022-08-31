@@ -30,7 +30,10 @@ describe('Dropdown - Focus behaviour', () => {
   });
 
   const pressTab = () =>
-    browser.actions().sendKeys(protractor.Key.TAB).perform();
+    browser
+      .actions()
+      .sendKeys(protractor.Key.TAB)
+      .perform();
 
   async function focusOnDropdown() {
     const firstElement = $(`[data-hook="input-for-initial-focus"]`);

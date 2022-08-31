@@ -46,9 +46,9 @@ class DataTableExample extends React.Component {
           onRowClick={(row, rowNum) => {
             /* eslint-disable no-alert*/
             window.alert(
-              `You clicked "${row.firstName} ${row.lastName}", row number ${
-                rowNum + 1
-              }`,
+              `You clicked "${row.firstName} ${
+                row.lastName
+              }", row number ${rowNum + 1}`,
             );
             /* eslint-enable no-alert*/
           }}

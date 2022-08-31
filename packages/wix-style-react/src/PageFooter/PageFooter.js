@@ -47,9 +47,8 @@ PageFooter.propTypes = {
         child.type.displayName !== 'PageFooter.End'
       ) {
         return new Error(
-          `Invalid children provided, unknown child <${
-            child.type.displayName || child.type
-          } /> supplied`,
+          `Invalid children provided, unknown child <${child.type.displayName ||
+            child.type} /> supplied`,
         );
       }
 

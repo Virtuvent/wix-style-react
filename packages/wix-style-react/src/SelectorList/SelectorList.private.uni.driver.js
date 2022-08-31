@@ -29,9 +29,14 @@ export const SelectorListPrivateUniDriverFactory = (base, body) => {
     isNextPageLoaderSmall: nextPageLoaderDriver.isSmall,
     getSearchPlaceholder: searchDriver.inputDriver.getPlaceholder,
     getSelectorToggleTypeAt: i => selectorDriverAt(i).toggleType(),
-    getSelectorTitleAt: i => selectorDriverAt(i).titleTextDriver().getText(),
+    getSelectorTitleAt: i =>
+      selectorDriverAt(i)
+        .titleTextDriver()
+        .getText(),
     getSelectorSubtitleAt: i =>
-      selectorDriverAt(i).subtitleTextDriver().getText(),
+      selectorDriverAt(i)
+        .subtitleTextDriver()
+        .getText(),
     getSelectorExtraNodeAt: i => selectorDriverAt(i).getExtraNode(),
     getSelectorImageAt: i => selectorDriverAt(i).getImage(),
     isSelectorImageTinyAt: i => selectorDriverAt(i).isImageTiny(),

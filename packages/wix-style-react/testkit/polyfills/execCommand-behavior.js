@@ -1,5 +1,5 @@
 const originalExecCommand =
-  typeof document === 'undefined' ? function () {} : document.execCommand;
+  typeof document === 'undefined' ? function() {} : document.execCommand;
 
 const install = () => {
   if (typeof document === 'undefined') {

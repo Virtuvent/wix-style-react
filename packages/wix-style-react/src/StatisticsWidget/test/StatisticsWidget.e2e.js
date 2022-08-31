@@ -22,7 +22,11 @@ const hover = (hook, index) =>
     .mouseMove(browser.$$(getHookSelector(hook)).get(index))
     .perform();
 
-const pressTab = () => browser.actions().sendKeys(protractor.Key.TAB).perform();
+const pressTab = () =>
+  browser
+    .actions()
+    .sendKeys(protractor.Key.TAB)
+    .perform();
 
 export const statisticsWidgetTestkitFactory = protractorUniTestkitFactoryCreator(
   statisticsWidgetPrivateDriverFactory,

@@ -13,16 +13,29 @@ const createStoryUrl = testName =>
   createTestStoryUrl({ ...storySettings, testName });
 const testStoryNames = storySettings.testStoryNames;
 
-const pressTab = () => browser.actions().sendKeys(protractor.Key.TAB).perform();
+const pressTab = () =>
+  browser
+    .actions()
+    .sendKeys(protractor.Key.TAB)
+    .perform();
 
 const pressEnter = () =>
-  browser.actions().sendKeys(protractor.Key.ENTER).perform();
+  browser
+    .actions()
+    .sendKeys(protractor.Key.ENTER)
+    .perform();
 
 const pressSpace = () =>
-  browser.actions().sendKeys(protractor.Key.SPACE).perform();
+  browser
+    .actions()
+    .sendKeys(protractor.Key.SPACE)
+    .perform();
 
 const pressRightKey = () =>
-  browser.actions().sendKeys(protractor.Key.RIGHT).perform();
+  browser
+    .actions()
+    .sendKeys(protractor.Key.RIGHT)
+    .perform();
 
 describe('Stepper', () => {
   const eyes = eyesItInstance();
@@ -44,7 +57,10 @@ describe('Stepper', () => {
     });
 
     eyes.it('should re-render with updated step sizes', async () => {
-      await browser.driver.manage().window().setSize(800, 800);
+      await browser.driver
+        .manage()
+        .window()
+        .setSize(800, 800);
     });
   });
 

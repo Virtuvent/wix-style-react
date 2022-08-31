@@ -28,7 +28,7 @@ describe('extractAttributes', () => {
 });
 
 describe('extractDataAttributes', () => {
-  it('should return only attributes that start with `data-`', function () {
+  it('should return only attributes that start with `data-`', function() {
     const props = {
       'data-att1': 'att1',
       'data-att2': 'att2',

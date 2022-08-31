@@ -8,7 +8,11 @@ import { storySettings, testStories } from '../docs/storySettings';
 import { tableActionCellTestkitFactory } from '../../../testkit/protractor';
 import { createTestStoryUrl } from '../../../test/utils/storybook-helpers';
 
-const hoverElement = element => browser.actions().mouseMove(element).perform();
+const hoverElement = element =>
+  browser
+    .actions()
+    .mouseMove(element)
+    .perform();
 
 describe('Table Action Cell', () => {
   const storyUrl = createTestStoryUrl({

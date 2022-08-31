@@ -129,10 +129,16 @@ describe('ModalSelectorLayout', () => {
         expect(await driver.showsEmptyState()).toBe(false);
         expect(await driver.listExists()).toBe(true);
         expect(
-          await driver.getSelectorDriverAt(0).titleTextDriver().getText(),
+          await driver
+            .getSelectorDriverAt(0)
+            .titleTextDriver()
+            .getText(),
         ).toBe('rick');
         expect(
-          await driver.getSelectorDriverAt(0).subtitleTextDriver().getText(),
+          await driver
+            .getSelectorDriverAt(0)
+            .subtitleTextDriver()
+            .getText(),
         ).toBe('sanchez');
         expect(
           (await driver.getSelectorDriverAt(0).getExtraNode()).textContent,
@@ -144,10 +150,16 @@ describe('ModalSelectorLayout', () => {
           `${ASSET_PREFIX}rick.png`,
         );
         expect(
-          await driver.getSelectorDriverAt(1).titleTextDriver().getText(),
+          await driver
+            .getSelectorDriverAt(1)
+            .titleTextDriver()
+            .getText(),
         ).toBe('morty');
         expect(
-          await driver.getSelectorDriverAt(1).subtitleTextDriver().getText(),
+          await driver
+            .getSelectorDriverAt(1)
+            .subtitleTextDriver()
+            .getText(),
         ).toBe('smith');
         expect(
           await driver.getSelectorDriverAt(1).getExtraNode(),
@@ -278,7 +290,10 @@ describe('ModalSelectorLayout', () => {
         );
         expect(await driver.numberOfItemsInList()).toBe(1);
         expect(
-          await driver.getSelectorDriverAt(0).titleTextDriver().getText(),
+          await driver
+            .getSelectorDriverAt(0)
+            .titleTextDriver()
+            .getText(),
         ).toBe('title-1');
       });
 
@@ -602,7 +617,7 @@ describe('ModalSelectorLayout', () => {
 
       const dataSource = paginatedDataSourceFactory(items);
 
-      const multiselectModalWithItems = async function (_items) {
+      const multiselectModalWithItems = async function(_items) {
         const _dataSource = paginatedDataSourceFactory(_items);
         const driver = createDriver({
           dataSource: _dataSource,

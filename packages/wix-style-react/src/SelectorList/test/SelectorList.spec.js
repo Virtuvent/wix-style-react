@@ -510,7 +510,7 @@ describe('SelectorList', () => {
 
       const dataSource = paginatedDataSourceFactory(items);
 
-      const multiselectListWithItems = async function (_items, checkbox) {
+      const multiselectListWithItems = async function(_items, checkbox) {
         const _dataSource = paginatedDataSourceFactory(_items);
         const driverCreator = checkbox
           ? createDriverWithCheckbox

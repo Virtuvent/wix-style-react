@@ -39,10 +39,16 @@ describe('Data Table', () => {
 
     const EC = protractor.ExpectedConditions;
     await browser.wait(EC.alertIsPresent(), 10000, 'Alert is not presented :(');
-    expect(await browser.switchTo().alert().getText()).toBe(
-      `You clicked "${name}", row number ${indexToClick + 1}`,
-    );
-    await browser.switchTo().alert().accept();
+    expect(
+      await browser
+        .switchTo()
+        .alert()
+        .getText(),
+    ).toBe(`You clicked "${name}", row number ${indexToClick + 1}`);
+    await browser
+      .switchTo()
+      .alert()
+      .accept();
   });
 
   eyes.it('display new data when received', async () => {

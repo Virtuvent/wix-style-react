@@ -6,7 +6,14 @@ export const dataTablePrivateUniDriverFactory = base => {
 
   return {
     ...dataTableUniDriverFactory(base),
-    getHeaderCell: index => base.$('thead').$$('th').get(index),
-    getCell: (rowIndex, cellIndex) => getRow(rowIndex).$$('td').get(cellIndex),
+    getHeaderCell: index =>
+      base
+        .$('thead')
+        .$$('th')
+        .get(index),
+    getCell: (rowIndex, cellIndex) =>
+      getRow(rowIndex)
+        .$$('td')
+        .get(cellIndex),
   };
 };

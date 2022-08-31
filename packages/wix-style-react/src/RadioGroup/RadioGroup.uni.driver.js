@@ -95,6 +95,8 @@ const radioButtonUniDriverFactory = (base, body, container) => {
     /** Getting the component's content element */
     getContent: () =>
       // eslint-disable-next-line no-restricted-properties
-      container().$(`[data-hook="${dataHooks.RadioContent}"]`).getNative(),
+      container()
+        .$(`[data-hook="${dataHooks.RadioContent}"]`)
+        .getNative(),
   };
 };

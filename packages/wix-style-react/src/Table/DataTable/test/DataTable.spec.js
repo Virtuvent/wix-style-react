@@ -648,7 +648,10 @@ describe('Table', () => {
     });
 
     const getRowKey = (wrapper, index) =>
-      wrapper.find('tbody tr[data-table-row="dataTableRow"]').at(index).key();
+      wrapper
+        .find('tbody tr[data-table-row="dataTableRow"]')
+        .at(index)
+        .key();
 
     it('should assign data.id as row keys', async () => {
       const props = createDefaultProps();

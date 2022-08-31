@@ -165,10 +165,30 @@ describe('Grid `<AutoAdjustedColumns/>`', () => {
       </AutoAdjustedColumns>,
     );
     expect(element.find(Col).length).toBe(4);
-    expect(element.find(Col).at(0).prop('span')).toEqual(3);
-    expect(element.find(Col).at(1).prop('span')).toEqual(3);
-    expect(element.find(Col).at(2).prop('span')).toEqual(3);
-    expect(element.find(Col).at(3).prop('span')).toEqual(3);
+    expect(
+      element
+        .find(Col)
+        .at(0)
+        .prop('span'),
+    ).toEqual(3);
+    expect(
+      element
+        .find(Col)
+        .at(1)
+        .prop('span'),
+    ).toEqual(3);
+    expect(
+      element
+        .find(Col)
+        .at(2)
+        .prop('span'),
+    ).toEqual(3);
+    expect(
+      element
+        .find(Col)
+        .at(3)
+        .prop('span'),
+    ).toEqual(3);
   });
 
   it('should ignore falsy elements from span calculation', () => {
@@ -182,8 +202,23 @@ describe('Grid `<AutoAdjustedColumns/>`', () => {
       </AutoAdjustedColumns>,
     );
     expect(element.find(Col).length).toBe(3);
-    expect(element.find(Col).at(0).prop('span')).toEqual(4);
-    expect(element.find(Col).at(1).prop('span')).toEqual(4);
-    expect(element.find(Col).at(2).prop('span')).toEqual(4);
+    expect(
+      element
+        .find(Col)
+        .at(0)
+        .prop('span'),
+    ).toEqual(4);
+    expect(
+      element
+        .find(Col)
+        .at(1)
+        .prop('span'),
+    ).toEqual(4);
+    expect(
+      element
+        .find(Col)
+        .at(2)
+        .prop('span'),
+    ).toEqual(4);
   });
 });

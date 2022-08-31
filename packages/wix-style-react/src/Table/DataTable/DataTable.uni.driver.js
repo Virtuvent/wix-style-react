@@ -25,10 +25,15 @@ export const dataTableUniDriverFactory = base => {
     (await isDisplayingNothing()) ? 0 : getRows().count();
   const getRow = rowIndex => getRows().get(rowIndex);
   const getCell = (rowIndex, cellIndex) =>
-    getRow(rowIndex).$$('td').get(cellIndex);
+    getRow(rowIndex)
+      .$$('td')
+      .get(cellIndex);
   const getRowDetails = index =>
     base.$(`tbody tr td[data-hook="${index}_details"]`);
-  const getHeaderCell = index => getHeader().$$('th').get(index);
+  const getHeaderCell = index =>
+    getHeader()
+      .$$('th')
+      .get(index);
   const getSortableTitle = index => base.$(`th [data-hook="${index}_title"]`);
   const getTitleInfoIcon = index =>
     base.$(`th [data-hook="${index}_info_tooltip"]`);
@@ -87,9 +92,13 @@ export const dataTableUniDriverFactory = base => {
     getCellWidth: (rowIndex, colIndex) =>
       getCell(rowIndex, colIndex)._prop('width'),
     isRowClickable: async index =>
-      !!(await getRows().get(index).attr('data-clickable')),
+      !!(await getRows()
+        .get(index)
+        .attr('data-clickable')),
     isRowAnimated: async index =>
-      !!(await getRows().get(index).attr('data-animated')),
+      !!(await getRows()
+        .get(index)
+        .attr('data-animated')),
     getTitles: () =>
       getHeader()
         .$$('th')

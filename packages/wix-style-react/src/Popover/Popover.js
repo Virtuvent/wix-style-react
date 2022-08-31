@@ -83,9 +83,8 @@ class Popover extends React.Component {
           child.type.displayName !== 'Popover.Content'
         ) {
           return new Error(
-            `Invalid children provided, unknown child <${
-              child.type.displayName || child.type
-            }/> supplied`,
+            `Invalid children provided, unknown child <${child.type
+              .displayName || child.type}/> supplied`,
           );
         }
 

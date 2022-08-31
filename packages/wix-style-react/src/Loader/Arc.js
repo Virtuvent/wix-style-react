@@ -38,9 +38,8 @@ function describeArc(x, y, radius, startAngle, endAngle) {
 
 const Arc = ({ className, strokeWidth, viewBoxSize, angle }) => {
   const d = describeArc(0, 0, (viewBoxSize - strokeWidth) / 2, 0, angle);
-  const viewBox = `-${viewBoxSize / 2} -${
-    viewBoxSize / 2
-  } ${viewBoxSize} ${viewBoxSize}`;
+  const viewBox = `-${viewBoxSize / 2} -${viewBoxSize /
+    2} ${viewBoxSize} ${viewBoxSize}`;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

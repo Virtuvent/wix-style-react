@@ -39,7 +39,10 @@ describe('Draggable', () => {
 
     console.info(wrapper.instance());
 
-    const backend = wrapper.instance().getManager().getBackend();
+    const backend = wrapper
+      .instance()
+      .getManager()
+      .getBackend();
 
     const draggable = wrapper.find(DraggableSource);
     const handleId = draggable.instance().getHandlerId();

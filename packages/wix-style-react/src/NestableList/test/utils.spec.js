@@ -4,15 +4,15 @@ import {
   VerticalMovementDirection,
 } from '../utils';
 
-describe('NestableList utils', function () {
-  it('getSiblingsByNodePosition at root level', function () {
+describe('NestableList utils', function() {
+  it('getSiblingsByNodePosition at root level', function() {
     expect(getSiblingsByNodePosition([{ id: 1 }, { id: 2 }], [0])).toEqual([
       { id: 1 },
       { id: 2 },
     ]);
   });
 
-  it('getSiblingsByNodePosition at nested level', function () {
+  it('getSiblingsByNodePosition at nested level', function() {
     expect(
       getSiblingsByNodePosition(
         [{ id: 1, children: [{ id: 3 }, { id: 4 }] }, { id: 2 }],
@@ -21,13 +21,13 @@ describe('NestableList utils', function () {
     ).toEqual([{ id: 3 }, { id: 4 }]);
   });
 
-  it('getSiblingsByNodePosition incorrect path', function () {
+  it('getSiblingsByNodePosition incorrect path', function() {
     expect(getSiblingsByNodePosition([{ id: 1 }, { id: 2 }], [0, 0])).toBe(
       null,
     );
   });
 
-  it('moveItem item to the top if it is already on the most top position', function () {
+  it('moveItem item to the top if it is already on the most top position', function() {
     expect(
       moveItemVertically(
         [{ id: 1 }, { id: 2 }],
@@ -37,14 +37,14 @@ describe('NestableList utils', function () {
     ).toEqual([{ id: 1 }, { id: 2 }]);
   });
 
-  it('moveItem item to the bottom if it is already on the most bottom position', function () {
+  it('moveItem item to the bottom if it is already on the most bottom position', function() {
     expect(moveItemVertically([{ id: 1 }, { id: 2 }], { id: 2 }, 1)).toEqual([
       { id: 1 },
       { id: 2 },
     ]);
   });
 
-  it('moveItem item to the bottom ', function () {
+  it('moveItem item to the bottom ', function() {
     expect(
       moveItemVertically(
         [{ id: 1 }, { id: 2 }],
@@ -54,7 +54,7 @@ describe('NestableList utils', function () {
     ).toEqual([{ id: 2 }, { id: 1 }]);
   });
 
-  it('moveItem item to the top', function () {
+  it('moveItem item to the top', function() {
     expect(
       moveItemVertically(
         [{ id: 1 }, { id: 2 }],
@@ -64,7 +64,7 @@ describe('NestableList utils', function () {
     ).toEqual([{ id: 2 }, { id: 1 }]);
   });
 
-  it('moveItem item to the top from one parent to another', function () {
+  it('moveItem item to the top from one parent to another', function() {
     expect(
       moveItemVertically(
         [{ id: 1 }, { id: 3, children: [{ id: 2 }] }],
@@ -77,7 +77,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem item to the top into parent sibling', function () {
+  it('moveItem item to the top into parent sibling', function() {
     expect(
       moveItemVertically(
         [
@@ -105,7 +105,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem item to the bottom into parent sibling', function () {
+  it('moveItem item to the bottom into parent sibling', function() {
     expect(
       moveItemVertically(
         [
@@ -133,7 +133,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem item to the top from one parent to another in case of multiple children', function () {
+  it('moveItem item to the top from one parent to another in case of multiple children', function() {
     expect(
       moveItemVertically(
         [
@@ -149,7 +149,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem item to the bottom from one parent to another in case of multiple children', function () {
+  it('moveItem item to the bottom from one parent to another in case of multiple children', function() {
     expect(
       moveItemVertically(
         [
@@ -165,7 +165,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem item to the bottom from one parent to another', function () {
+  it('moveItem item to the bottom from one parent to another', function() {
     expect(
       moveItemVertically(
         [{ id: 1, children: [{ id: 3 }] }, { id: 2 }],
@@ -178,7 +178,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem to the top one parent to another and skip one ', function () {
+  it('moveItem to the top one parent to another and skip one ', function() {
     expect(
       moveItemVertically(
         [
@@ -196,7 +196,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem to the bottom third level node ', function () {
+  it('moveItem to the bottom third level node ', function() {
     expect(
       moveItemVertically(
         [
@@ -232,7 +232,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem to the top deep level node ', function () {
+  it('moveItem to the top deep level node ', function() {
     expect(
       moveItemVertically(
         [
@@ -262,7 +262,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem to the bottom from one parent to another and skip one ', function () {
+  it('moveItem to the bottom from one parent to another and skip one ', function() {
     expect(
       moveItemVertically(
         [
@@ -280,7 +280,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem real case, fix issue', function () {
+  it('moveItem real case, fix issue', function() {
     expect(
       moveItemVertically(
         [
@@ -324,7 +324,7 @@ describe('NestableList utils', function () {
     ]);
   });
 
-  it('moveItem respect childProp key ', function () {
+  it('moveItem respect childProp key ', function() {
     expect(
       moveItemVertically(
         [

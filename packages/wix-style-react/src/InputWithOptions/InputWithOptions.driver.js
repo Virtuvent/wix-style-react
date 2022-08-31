@@ -12,8 +12,9 @@ const inputWithOptionsDriverFactory = ({ element, eventTrigger }) => {
     element.querySelector(`${inputWrapperSelector} > *:first-child `);
 
   const dropdownLayoutWrapper = () =>
-    popoverTestkit().getContentElement().querySelector(dropdownLayoutSelector)
-      .childNodes[0];
+    popoverTestkit()
+      .getContentElement()
+      .querySelector(dropdownLayoutSelector).childNodes[0];
 
   const inputDriver = inputDriverFactory({
     element: inputWrapper(),
@@ -32,7 +33,9 @@ const inputWithOptionsDriverFactory = ({ element, eventTrigger }) => {
     selectOptionById: id => {
       inputDriver.focus();
       inputDriver.keyDown('ArrowDown');
-      dropdownLayoutTestkit().optionById(id).click();
+      dropdownLayoutTestkit()
+        .optionById(id)
+        .click();
     },
     isReadOnly: () =>
       inputDriver.getReadOnly() &&
