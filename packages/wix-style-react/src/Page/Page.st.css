@@ -220,13 +220,9 @@
 }
 
 .fixedFooter {
-  background: linear-gradient(90deg, transparent 40px, value(D70) 40px, value(D70) calc(100% - 40px), transparent calc(100% - 40px));
   position: fixed;
   bottom: 0;
   right: 50%;
   transform: translateX(50%);
-  width: available;
-  width: -moz-available;
-  width: -webkit-fill-available;
-  padding: 0 48px 48px 48px;
+  width: 100%;
 }

@@ -1,7 +1,7 @@
 {
   "name": "@virtuvent/wix-style-react",
   "description": "wix-style-react",
-  "version": "9.91.0",
+  "version": "9.93.0",
   "private": false,
   "main": "./dist/src/index.js",
   "module": "./dist/es/src/index.js",
