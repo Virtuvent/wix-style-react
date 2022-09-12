@@ -4,8 +4,11 @@ import classNames from 'classnames';
 import s from './Toolbar.scss';
 import Text from '../Text';
 
-export const Toolbar = props => {
-  return <div className={s.toolbar}>{props.children}</div>;
+export const Toolbar = ({
+  children,
+  className,
+}) => {
+  return <div className={classNames([s.toolbar, className])}>{children}</div>;
 };
 
 Toolbar.displayName = 'Toolbar';

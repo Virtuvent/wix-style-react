@@ -178,7 +178,10 @@
   width: 100%;
 }
 
-/* Hover */
+/*
+
+Hover
+
 .root:hover:not(:hasFocus):not(:disabled):not(:border(bottomLine)),
 .root:forceHover:not(.disabled):not(:border(bottomLine)) {
   background-color: value(THEME-COLOR-50);
@@ -203,6 +206,7 @@
 .root:hover.readOnly.disabled {
    border: solid 1px value(D60);
  }
+*/
 
 /* Read Only */
 .root:readOnly {
@@ -212,7 +216,7 @@
 
 /* Border */
 .root:border(round) {
-  -st-mixin: borderRadiusMixin(40px);
+  -st-mixin: borderRadiusMixin(8px);
 }
 
 .root:border(bottomLine) {

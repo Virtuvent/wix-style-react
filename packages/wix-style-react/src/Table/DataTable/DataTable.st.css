@@ -17,9 +17,6 @@
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
-  background-color: white;
-  border-radius: 25px 25px 0 0;
-  overflow: hidden;
 }
 
 .table thead {
@@ -28,6 +25,7 @@
 
 .table tbody {
   -st-mixin: text-small-thin;
+  background: #FFF;
 }
 
 .table.virtualized {
@@ -90,8 +88,14 @@
 }
 
 .table td:first-child, .table th:first-child {
-  padding-left: 30px;
-  padding-right: 12px;
+  padding-left: 32px;
+}
+
+.table th:first-child {
+  border-radius: 25px 0 0 0;
+}
+.table th:last-child {
+  border-radius: 0 25px 0 0;
 }
 
 .table td:first-child.reducedSpacingAndImprovedLayout, .table th:first-child.reducedSpacingAndImprovedLayout {
@@ -151,8 +155,8 @@
 }
 
 .table td.mediumVerticalPadding {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 26px;
+  padding-bottom: 25px;
 }
 
 .table td.newSmallVerticalPadding {

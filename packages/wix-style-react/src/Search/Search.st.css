@@ -29,7 +29,7 @@
 }
 
 .root:size(medium):expanded .content {
-  width: 36px;
+  width: 48px;
 }
 
 .root:size(small):expanded .content {

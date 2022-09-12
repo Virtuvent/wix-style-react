@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Toolbar, ItemGroup, Item, Label, Divider } from './Toolbar';
 import Heading from '../Heading';
 import Text from '../Text';
+import {classes} from "./TableToolbar.st.css"
 
 export const Title = props => {
   const { dataHook } = props;
@@ -33,7 +34,9 @@ SelectedCount.propTypes = {
   dataHook: PropTypes.string,
 };
 
-export const TableToolbar = Toolbar;
+export const TableToolbar = (props) => {
+  return props.children ? <Toolbar {...props} className={classes.root} /> : null;
+};
 
 // Aliases for convenience
 TableToolbar.ItemGroup = ItemGroup;
