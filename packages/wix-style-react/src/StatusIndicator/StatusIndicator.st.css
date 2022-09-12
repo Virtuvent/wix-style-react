@@ -7,7 +7,7 @@
   -st-states: status(enum(error, warning));
 
   width: 18px;
-  height: 18px;
+  height: 32px;
 
   /* Error is the default */
   color: value(R10);

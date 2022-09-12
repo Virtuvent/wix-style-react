@@ -44,7 +44,7 @@
 .up,
 .down {
   padding: 4px 6px;
-  color: value(THEME-COLOR-10);
+  color: #9C9DAD;
   cursor: pointer;
 }
 

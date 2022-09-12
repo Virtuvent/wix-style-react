@@ -27,7 +27,7 @@
   -st-states: skin(string), type(string), size(string), clickable(boolean), uppercase(boolean);
 
   border: 1px solid;
-  border-radius: 2px;
+  border-radius: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;

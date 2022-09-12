@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import InputConsumer from '../InputConsumer';
 import { st, classes } from './IconAffix.st.css';
 
-const IconAffix = ({ children, dataHook }) => (
+const IconAffix = ({ children, dataHook, className }) => (
   <InputConsumer consumerCompName={IconAffix.displayName}>
     {({
       size,
@@ -21,7 +21,7 @@ const IconAffix = ({ children, dataHook }) => (
           inSuffix,
           border: roundInput ? 'round' : border,
           disabled,
-        })}
+        }, className )}
         onClick={!disabled ? onInputClicked : undefined}
         data-hook={dataHook}
       >

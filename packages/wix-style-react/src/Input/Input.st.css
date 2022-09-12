@@ -39,7 +39,7 @@
   -st-mixin: boxSizingMixin('border-box'), borderRadiusMixin(value(THEME-RADIUS-06));
   position: relative;
   display: flex;
-  border: solid 1px value(THEME-COLOR-30);
+  border: solid 1px #D7D8DE;
   background-color: value(D80);
   color: value(THEME-TEXT-COLOR-PRIMARY);
 }
@@ -104,7 +104,10 @@
 
 .root:size(medium):isMadefor,
 .root:size(medium):isMadefor .input {
-  -st-mixin: text-medium-thin;
+  line-height: 38px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Inter;
 }
 
 .root:size(medium):isMadefor .input:-webkit-autofill::first-line {
