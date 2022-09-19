@@ -51,10 +51,10 @@
   backgroundColor: grey;
   borderColor: grey;
   color: value(D80);
-  padding: 5px 12px;
-  medium: 0px 12px;
+  padding: 4px 12px;
+  medium: 4px 12px;
   small: 0px 6px;
-  mediumHeight: 24px;
+  mediumHeight: 28px;
   smallHeight: 18px;
 }
 
@@ -203,25 +203,25 @@
 
 .root:type(solid):skin(standard) {
   -st-mixin: BadgeStyle(
-    backgroundColor value(THEME-COLOR-20),
-    borderColor value(THEME-COLOR-20),
-    color white
+    backgroundColor #DFECFF,
+    borderColor #DFECFF,
+    color #0059DF
   );
 }
 
 .root:type(solid):skin(danger) {
   -st-mixin: BadgeStyle(
-    backgroundColor value(R10),
-    borderColor value(R10),
-    color white
+    backgroundColor #FEECEC,
+    borderColor #FEECEC,
+    color #EF3939
   );
 }
 
 .root:type(solid):skin(success) {
   -st-mixin: BadgeStyle(
-    backgroundColor value(G10),
-    borderColor value(G10),
-    color white
+    backgroundColor #E4F9F9,
+    borderColor #E4F9F9,
+    color #26B3B3
   );
 }
 
