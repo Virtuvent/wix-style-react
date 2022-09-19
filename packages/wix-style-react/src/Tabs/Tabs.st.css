@@ -23,7 +23,7 @@
 }
 
 .container:size(medium) {
-  -st-mixin: text-medium-normal;
+  -st-mixin: text-small-normal;
 }
 
 .container:size(small) {
@@ -58,7 +58,8 @@
 }
 
 .tab:size(medium) {
-  padding: 18px 18px 16px;
+  padding: 8px;
+  margin-right: 40px;
 }
 
 .compact .tab {
@@ -90,11 +91,11 @@
 }
 
 .tab:active {
-  border-color: value(THEME-COLOR-10);
+  border-color: #0066FF;
 }
 
 .tab:active span.tabText {
-  color: value(THEME-COLOR-10);
+  color: #0066FF;
 }
 
 .container:hasDivider {

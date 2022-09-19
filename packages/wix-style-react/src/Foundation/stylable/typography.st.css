@@ -11,8 +11,8 @@
 
 /* Family mixin */
 .family-mixin {
-  font-family: value(family), value(fontsfallback); /* IE11 */
-  font-family: var(--wsr-font-family, value(family)), value(fontsfallback);
+  font-family: Inter, value(family), value(fontsfallback); /* IE11 */
+  font-family: Inter, var(--wsr-font-family, value(family)), value(fontsfallback);
 }
 
 /* Weight mixin */

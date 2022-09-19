@@ -17,7 +17,6 @@
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
-  background-color: white;
 }
 
 .table thead {
@@ -26,6 +25,7 @@
 
 .table tbody {
   -st-mixin: text-small-thin;
+  background: #FFF;
 }
 
 .table.virtualized {
@@ -88,8 +88,14 @@
 }
 
 .table td:first-child, .table th:first-child {
-  padding-left: 30px;
-  padding-right: 12px;
+  padding-left: 32px;
+}
+
+.table th:first-child {
+  border-radius: 25px 0 0 0;
+}
+.table th:last-child {
+  border-radius: 0 25px 0 0;
 }
 
 .table td:first-child.reducedSpacingAndImprovedLayout, .table th:first-child.reducedSpacingAndImprovedLayout {
@@ -99,15 +105,14 @@
 .table th {
   text-align: initial;
   font-weight: initial;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  height: 24px;
-  color: value(D10);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  height: 36px;
+  color: #88899D;
 }
 
 .table th.thSkinStandard {
-  background-color: value(B40);
-  box-shadow: inset 0 1px 0 0 value(B30), inset 0 -1px 0 0 value(B30);
+  background-color: #FFF;
 }
 
 .table th.thSkinNeutral {
@@ -150,8 +155,8 @@
 }
 
 .table td.mediumVerticalPadding {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 26px;
+  padding-bottom: 25px;
 }
 
 .table td.newSmallVerticalPadding {

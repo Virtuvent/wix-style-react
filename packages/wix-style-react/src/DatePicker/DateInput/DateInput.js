@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CalendarIcon from 'wix-ui-icons-common/Date';
 import Input from '../../Input';
 import { formatDate, formatDateV2 } from '../../LocaleUtils';
+import { classes } from './DateInput.st.css';
 
 class DateInput extends React.PureComponent {
   static displayName = 'DateInput';
@@ -41,8 +42,8 @@ class DateInput extends React.PureComponent {
     const { value: initialValue, customInput, ...rest } = this.props;
     const _inputProps = {
       value: this._formatDateValue(),
-      prefix: (
-        <Input.IconAffix dataHook="date-input-date-icon">
+      suffix: (
+        <Input.IconAffix dataHook="date-input-date-icon" className={classes.suffixIcon}>
           <CalendarIcon />
         </Input.IconAffix>
       ),

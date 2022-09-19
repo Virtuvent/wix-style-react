@@ -72,7 +72,7 @@ const renderHiddenActions = (actions, popoverMenuProps, size) => (
   <PopoverMenu
     dataHook={dataHooks.popoverMenu}
     appendTo="parent"
-    placement="top"
+    placement="bottom"
     textSize="small"
     triggerElement={
       <IconButton
